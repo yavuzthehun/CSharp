@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Loops
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            basamakDegeri();
+            Console.ReadLine();
+        }
+
+        static void basamakDegeri()
+        {
+            Console.Write("Basamak Değerini bulmak istediğiniz rakamı giriniz :");
+            int value = int.Parse(Console.ReadLine());
+            int count=0;
+            while (value > 0)
+            {
+                count++;
+                value = value / 10;
+            }
+            Console.Write("Girmiş olduğunuz sayının basamak değeri :{0} ",count);
+
+        }
+        
+    }
+}
