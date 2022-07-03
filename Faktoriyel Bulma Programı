@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Loops
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            Factorial();
+            
+        }
+        static void Factorial()
+        {
+            Console.WriteLine(" -------Faktoriyel programına hoşgeldiniz------- ");
+            Console.Write("Lütfen Faktoriyeli bulunmasını istediğiniz rakamı giriniz : ");
+            int faktorial = int.Parse(Console.ReadLine());
+            if(faktorial==0)
+                Console.WriteLine("Girmiş olduğunuz sayının faktoriyeli : {0}' dır.",1);
+            else if (faktorial < 0)
+            {
+                Console.WriteLine("Girmiş olduğunuz sayı negatiftir, pozitif bir sayı giriniz....");
+            }
+            else
+            {
+                int result = 1;
+                for (int i = 1; i <=faktorial; i++)
+                {
+                    result *= i;
+                }
+                Console.WriteLine("Girmiş olduğunuz sayının faktoriyeli : {0}' dır. ",result);
+            }
+            Console.ReadLine();
+        }
+    }
+}
