@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Donguler
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Asal Sayı Bulma Programına Hoşgeldiniz");
+            Console.Write("Lütfen Asal Sayı olup olmadığını öğrenmek istediğiniz sayıyı giriniz :");
+            int asalSayi = Convert.ToInt32(Console.ReadLine());
+            int flag=0;
+            for (int i = 2; i <asalSayi; i++)
+            {
+                if ((asalSayi % i) == 0)
+                {
+                    flag++;
+                }
+               
+            }
+            if (flag != 0)
+                Console.WriteLine("Bu sayı asal sayı değildir.");
+            else
+                Console.WriteLine("Bu sayı asal sayıdır.");
+            Console.ReadLine();
+        }
