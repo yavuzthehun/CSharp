@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Loops
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            reverseNumber();
+            Console.ReadLine();
+            
+        }
+
+        static void reverseNumber()
+        {
+            Console.WriteLine("Sayının Tersini Bulma Programına Hoşgeldiniz");
+            Console.Write("Lütfen bir sayı giriniz :");
+            int reverse = int.Parse(Console.ReadLine());
+            int result;
+            do
+            {
+                 result = reverse % 10;
+                Console.Write(result);
+                reverse = reverse / 10;
+
+            } while (reverse>0);
+            
+        }
+    }
+}
