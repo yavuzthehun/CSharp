@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Loops
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+    
+            KuvvetAlma();
+            Console.ReadLine();
+            
+        }
+        static void KuvvetAlma()
+        {
+            Console.WriteLine("Programa hoşgeldiniz");
+            Console.Write("Lütfen Kuvveti alınacak rakamı giriniz :");
+            int taban = int.Parse(Console.ReadLine());
+            Console.Write("Lütfen Kuvveti değerini giriniz :");
+            int us = int.Parse(Console.ReadLine());
+            int result = 1;
+            for(int i = 0; i < us; i++)
+            {
+                result *= taban;
+                Console.WriteLine(result);
+            }
+        }
+    }
+}
